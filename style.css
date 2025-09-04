@@ -1,0 +1,157 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* App Container */
+.app {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #00c6ff;
+}
+
+/* Input Section */
+.input-box {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 12px;
+  background: #2a2a2a;
+  color: #f5f5f5;
+}
+
+.input-box input:focus {
+  outline: 2px solid #00c6ff;
+}
+
+.btn {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #00c6ff;
+  color: #0f0f0f;
+}
+
+.btn.primary:hover {
+  background: #00a3cc;
+}
+
+.btn.update {
+  background: #ffaa00;
+  color: #0f0f0f;
+  display: none;
+  /* initially hidden */
+}
+
+.btn.update:hover {
+  background: #e69900;
+}
+
+/* Empty Message */
+.empty-msg {
+  text-align: center;
+  color: #888;
+  margin-top: 1rem;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.task-list li {
+  background: #2a2a2a;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.task-list li span {
+  flex: 1;
+  font-size: 1rem;
+}
+
+/* Buttons inside tasks */
+.task-list button {
+  margin-left: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.task-list button:hover {
+  opacity: 0.85;
+}
+
+.task-list .edit {
+  background: #ffaa00;
+  color: #0f0f0f;
+}
+
+.task-list .edit:hover {
+  background: #e69900;
+}
+
+.task-list button:first-of-type {
+  background: #ff4d4d;
+  color: white;
+}
+
+.task-list button:first-of-type:hover {
+  background: #e63939;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
